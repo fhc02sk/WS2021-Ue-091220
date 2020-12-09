@@ -15,5 +15,14 @@ public class DemoFourWinsApp {
         game.playerB(2,3);
         game.print();
 
+        System.out.println("Zweite Runde");
+        game.playerA(2,1);
+        game.playerA(3,1);
+        game.playerA(4,1);
+        game.print();
+
+        System.out.println("game.fourInRow() = " + game.fourInRow());
+        System.out.println("game.fourInRow2() = " + game.fourInRow2());
+
     }
 }
