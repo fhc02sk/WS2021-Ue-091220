@@ -21,9 +21,9 @@ public class LottoDemo {
         System.out.println();
 
 
-        System.out.println("Lottoschein mit 4 Tips");
-        int[][] quickTip = generateLottoTips(4);
 
+        int[][] quickTip = generateLottoTips(40);
+        System.out.println("Lottoschein mit " + quickTip.length + " Tips");
         for (int i = 0; i < quickTip.length; i++) {
             for (int j = 0; j < quickTip[i].length; j++) {
                 System.out.print(quickTip[i][j] + ", ");
@@ -36,6 +36,10 @@ public class LottoDemo {
 
     public static int[][] generateLottoTips(int count) {
         int[][] arr = new int[count][6];
+
+        for (int i = 0; i < count; i++){
+            arr[i] = generateLottoTip();
+        }
 
         return arr;
     }
