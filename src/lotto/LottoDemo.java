@@ -18,9 +18,20 @@ public class LottoDemo {
 
     public static int[] generateLottoTip(){
         // Leeres Array generieren
+        int[] arrLottoTip = new int[6];
+
         // for-Schleife über Array iterieren
+        // solange => while-Schleife
+
         // Auf jedes Element eine Zufallszahl schreiben
+
         // Sicherstellen, dass jede Zahl vorher noch nicht vorgekommen ist
+
+        return arrLottoTip;
+    }
+
+    public static boolean contains(int[] arr, int validate){
+        // true/false retourniert, wenn die Zahl enthalten
     }
 
 }
