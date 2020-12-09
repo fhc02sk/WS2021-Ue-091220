@@ -17,7 +17,10 @@ public class LottoDemo {
     }
 
     public static int[] generateLottoTip(){
-
+        // Leeres Array generieren
+        // for-Schleife über Array iterieren
+        // Auf jedes Element eine Zufallszahl schreiben
+        // Sicherstellen, dass jede Zahl vorher noch nicht vorgekommen ist
     }
 
 }
