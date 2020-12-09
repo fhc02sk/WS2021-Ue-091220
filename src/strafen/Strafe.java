@@ -38,6 +38,26 @@ public class Strafe {
         strafe += 25;
     }
 
+    public void alkohol(double wert) {
+        if (wert < 0.5)
+            return;
+
+        anzahl += 2;
+        if (wert <= 1.0)
+            strafe += 100;
+        else if (wert <= 2.0)
+            strafe += 400;
+        else if (wert <= 3.0)
+            strafe += 1000;
+        else
+            strafe += 5000;
+    }
+
+    public void sonstiges(double wert) {
+        anzahl++;
+        strafe+=wert;
+    }
+
     public String toString() {
         return "Strafe{" +
                 "vorname='" + vorname + '\'' +
@@ -66,7 +86,14 @@ public class Strafe {
     }
 
     public double getStrafe() {
-        return strafe;
+        if (anzahl == 1)
+            return strafe * 0.7;
+        if (anzahl == 2)
+            return strafe * 0.8;
+        if (anzahl == 3)
+            return strafe * 0.9;
+        else
+            return strafe;
     }
 
     public byte getAnzahl() {

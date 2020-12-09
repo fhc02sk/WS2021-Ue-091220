@@ -12,5 +12,13 @@ public class DemoStrafeApp {
         System.out.println("susi.toString() = " + susi.toString());
         System.out.println("drei.toString() = " + drei.toString());
 
+        susi.alkohol(1);
+        System.out.println("susi.toString() = " + susi.toString());
+        susi.strafe(35);
+        System.out.println("susi.toString() = " + susi.toString());
+        susi.verbandspaket();
+
+        System.out.println(susi.getStrafe());
+
     }
 }
