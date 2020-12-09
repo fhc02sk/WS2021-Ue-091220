@@ -18,7 +18,15 @@ public class LottoDemo {
         for (int i = 0; i < arrLottoTip.length; i++) {
             System.out.print(arrLottoTip[i] + ", ");
         }
+        System.out.println();
 
+
+    }
+
+    public static int[][] generateLottoTips(int count) {
+        int[][] arr = new int[count][6];
+
+        return arr;
     }
 
     public static int[] generateLottoTip(){
