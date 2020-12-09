@@ -13,7 +13,12 @@ public class LottoDemo {
         int intValue = (int) ((randValue * 45) + 1);
         int intValue2 = (int) ((Math.random() * 45) + 1);
 
-        int[] arrLottoTip = new int[6]; /* 0 ... 5 */
+        int[] arrLottoTip = generateLottoTip();
+
+        for (int i = 0; i < arrLottoTip.length; i++) {
+            System.out.print(arrLottoTip[i] + ", ");
+        }
+
     }
 
     public static int[] generateLottoTip(){
@@ -21,17 +26,31 @@ public class LottoDemo {
         int[] arrLottoTip = new int[6];
 
         // for-Schleife über Array iterieren
-        // solange => while-Schleife
-
-        // Auf jedes Element eine Zufallszahl schreiben
-
-        // Sicherstellen, dass jede Zahl vorher noch nicht vorgekommen ist
+        for (int i = 0; i < arrLottoTip.length; i++) {
+            arrLottoTip[i] = -1;
+            boolean success = false;
+            do {
+                int randValue = (int) (Math.random() * 45) + 1;
+                if (!contains(arrLottoTip, randValue)) {
+                    arrLottoTip[i] = randValue;
+                    success = true;
+                }
+//                else
+//                    System.out.println("doppelte zahl!: " + randValue);
+            } while (!success);
+        }
 
         return arrLottoTip;
     }
 
     public static boolean contains(int[] arr, int validate){
         // true/false retourniert, wenn die Zahl enthalten
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == validate) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
