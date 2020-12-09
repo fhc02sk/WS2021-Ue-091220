@@ -19,10 +19,14 @@ public class DemoFourWinsApp {
         game.playerA(2,1);
         game.playerA(3,1);
         game.playerA(4,1);
+        game.playerB(2,4);
+        game.playerB(2,5);
         game.print();
 
-        System.out.println("game.fourInRow() = " + game.fourInRow());
+       /* System.out.println("game.fourInRow() = " + game.fourInRow());
         System.out.println("game.fourInRow2() = " + game.fourInRow2());
+        System.out.println("game.fourInColumn() = " + game.fourInColumn());*/
 
+        System.out.println("game.winner() = " + game.winner());
     }
 }

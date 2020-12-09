@@ -17,7 +17,7 @@ public class FourWins {
         }
     }
 
-    public char fourInRow(){
+    private char fourInRow(){
         for (int i = 0; i < charArray.length; i++) {
             // Schleife für Zeilen
             int counter = 0;
@@ -46,7 +46,7 @@ public class FourWins {
         return 'X';
     }
 
-    public char fourInRow2(){
+    private char fourInRow2(){
         for (int i = 0; i < charArray.length; i++) {
             // Schleife für Zeilen
             for (int j = 0; j < charArray[i].length - 3; j++) {
@@ -64,13 +64,31 @@ public class FourWins {
         return 'X';
     }
 
-    public char fourInColumn(){
+    private char fourInColumn(){
+        for (int i = 0; i < sizeX; i++) {
+            // Schleife für Zeilen
+            for (int j = 0; j < sizeY - 3; j++) {
+                if (charArray[j][i] != ' '){
+                    char player = charArray[j][i];
+                    if (charArray[j + 1][i] == player
+                            && charArray[j + 2][i] == player
+                            && charArray[j + 2][i] == player){
+                        return player;
+                    }
+                }
+            }
+        }
 
         return 'X';
     }
 
     public char winner() {
-        return 'X';
+        char player = fourInRow2();
+        if (player != 'X')
+            return player;
+
+        player = fourInColumn();
+        return player;
     }
 
     public boolean playerA(int x, int y){
