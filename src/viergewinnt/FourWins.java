@@ -17,6 +17,20 @@ public class FourWins {
         }
     }
 
+    public char fourInRow(){
+
+        return 'X';
+    }
+
+    public char fourInColumn(){
+
+        return 'X';
+    }
+
+    public char winner() {
+        return 'X';
+    }
+
     public boolean playerA(int x, int y){
         if (charArray[y][x] == ' ') {
             charArray[y][x] = 'A';
