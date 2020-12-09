@@ -9,6 +9,15 @@ public class LottoDemo {
         // (Lotto-Tip) liefert.
         // Stelle dabei sicher, dass jede Zahl nur einmal vorkommt und somit eindeutig ist.
 
+        double randValue = Math.random(); /* 0.00.. - 0.99.. */
+        int intValue = (int) ((randValue * 45) + 1);
+        int intValue2 = (int) ((Math.random() * 45) + 1);
+
+        int[] arrLottoTip = new int[6]; /* 0 ... 5 */
+    }
+
+    public static int[] generateLottoTip(){
 
     }
+
 }
